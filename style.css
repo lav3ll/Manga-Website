@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #16151d;
+    background-repeat: none;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    overflow-y: scroll;
+    margin-top: 0;
+    margin-left: 0;
+    color: #b8b8b8;
+}
+
+
+/* Nav bar styling */
+.top-nav {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin-top: 0;
+    margin-left: 0;
+
+}
+
+.fa-bars,
+.fa-circle-user {
+    font-size: 37px;
+    margin: 10px 10px;
+    color: #eee;
+}
+
+#search-bar {
+    position: absolute;
+    border: none;
+    border-radius: 4px;
+    color: #eee;
+    background-color: #312f40;
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 70%;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.bottom-nav {
+    position: relative;
+    width: 100%;
+    background-color: purple;
+    height: 45px;
+    z-index: 100;
+    margin-top: 0;
+}
+
+.nav-btn {
+    border: none;
+    background-color: purple;
+    color: #eee;
+    font-weight: 600;
+
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.inner-container {
+    width: 0%;
+}
+
+
+
+.trending {
+    position: relative;
+    width: 220px;
+    height: 280px;
+    background-color: teal;
+    overflow: visible;
+    z-index: 100;
+    margin-left: 280px;
+    margin-top: -348px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.trending-title {
+    position: relative;
+    margin-top: -75%;
+    color: white;
+}
+
+/* //////////////////////////////////////////////////////////////////////////// */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 619px;
+    max-height: 280px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    margin-left: 0;
+    border-radius: 5px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.super-slider {
+    height: 280px;
+    width: 619px;
+    p
+}
+
+.slides {
+    position: relative;
+    height: 280px;
+    max-width: 619px;
+    overflow: hidden;
+    z-index: 2;
+
+
+
+}
+
+.slide-genre,
+.summary-text,
+.summary-title,
+.slide-title {
+    padding-left: 5px;
+    position: relative;
+    color: #fff;
+}
+
+.slide-title {
+    margin-top: -140px;
+}
+
+.summary-text {
+    font-size: 10px;
+    position: relative;
+}
+
+.summary-title {
+    font-size: 1em;
+    font-weight: 600;
+    position: relative;
+}
+
+
+
+.img-slide {
+    position: relative;
+    border-radius: 5px;
+    flex-direction: row;
+    margin-left: 450px;
+    margin-top: -170px;
+    width: 120px;
+    height: 200px;
+
+}
+
+
+
+/* Popular */
+.container .popular {
+    position: relative;
+    margin-top: 20px;
+    background-color: #312f40;
+    max-width: 850px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 7px;
+    overflow: hidden;
+    border-radius: 3px;
+
+}
+
+.pop-title {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-left: -100px;
+    margin-top: 200px;
+}
+
+.latest-chapter {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-left: -90px;
+    margin-top: 218px;
+}
+
+img {
+    border-radius: 3px;
+}
+
+.container .latest-update {
+    background: #312f40;
+    width: 850px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.manga-container {
+    width: 50%;
+    display: flex;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 250px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+    border-radius: 2px solid;
+}
+
+.latest {
+    width: 100%;
+    border-bottom: 2px solid gray;
+}
+
+.latest-update-title {
+    padding-left: 10px;
+    flex: none;
+    font-size: 1em;
+    text-align: left !important;
+    width: 150px;
+    height: 10px;
+
+}
+
+span {
+    font-size: .7em;
+    flex: none;
+    text-indent: 1em;
+}
+
+ul {
+    flex: none;
+    display: block;
+    position: relative;
+    margin-top: 45px;
+    margin-left: -155px;
+}
+
+.next-btn {
+    position: relative;
+    margin-top: 10px;
+    width: 50px;
+    height: 30px;
+    left: 50%;
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.next-btn :hover {
+    cursor: pointer;
+}
+
+.rec-container {
+    position: absolute;
+    height: 850px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: #312f40;
+    z-index: 200;
+    max-height: max-content;
+    margin-top: -450px;
+    margin-left: 870px;
+    overflow-y: hidden;
+    border-radius: 5px;
+
+}
+
+.btns-container-1 {
+    display: flex;
+    justify-content: center;
+    height: 34px;
+}
+
+.btns-container-2 {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 90%;
+    background-color: lightgray;
+    border-radius: 3px;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.btn {
+    width: 102px;
+    height: 22px;
+    border: none;
+    border-radius: 5px;
+    background-color: purple;
+    color: white;
+    display: block !important;
+    position: relative;
+    font-weight: 600;
+}
+
+.rec-1,
+.rec-2,
+.rec-3,
+.rec-4,
+.rec-5,
+.rec-6,
+.rec-7 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 95px;
+    border-bottom: 3px solid #b8b8b8;
+    background-color: #312f40;
+}
+
+.genres {
+    flex: none;
+    margin-top: 30px;
+    margin-left: -113px;
+    font-size: .8em;
+}
+
+#star {
+    position: relative;
+}
+
+.rec-title {
+    flex: none;
+    margin-left: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    position: relative;
+    margin-bottom: -10px;
+    width: 100%;
+    height: 20px;
+    background-color: purple;
+}
+
+#weekly,
+#monthly,
+#all {
+    background-color: #d3d3d3;
+}

@@ -19,6 +19,7 @@ body {
     margin-top: 0;
     margin-left: 0;
     color: #b8b8b8;
+    z-index: -1000;
 }
 
 
@@ -30,6 +31,11 @@ body {
     margin-top: 0;
     margin-left: 0;
 
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 .fa-bars,
@@ -76,6 +82,7 @@ body {
     width: 80%;
     height: 100%;
     overflow: hidden;
+    margin-top: 50px;
     margin-bottom: 30px;
 }
 
@@ -127,13 +134,19 @@ body {
     display: none;
 }
 
+/* .prev-next {
+    width: 973px;
+    background-color: blue;
+} */
+
+
 /* Next & previous buttons */
 .prev,
 .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
+    width: 47px;
     margin-top: -22px;
     padding: 16px;
     color: white;
@@ -142,6 +155,10 @@ body {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+}
+
+.next {
+    left: 730px;
 }
 
 /* Position the "next button" to the right */
@@ -153,7 +170,7 @@ body {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(209, 255, 3, 0.8);
 }
 
 /* Caption text */
@@ -299,14 +316,21 @@ body {
     margin-top: -170px;
     width: 120px;
     height: 200px;
+}
 
+#img1,
+#img2,
+#img3 {
+    max-width: 100%;
+    ;
 }
 
 
 
+
 /* Popular */
-.container .popular {
-    position: relative;
+.container-popular {
+    /* position: fixed; */
     margin-top: 20px;
     background-color: #312f40;
     max-width: 850px;
@@ -452,13 +476,15 @@ ul {
     font-weight: 600;
 }
 
-.rec-1,
-.rec-2,
-.rec-3,
-.rec-4,
-.rec-5,
-.rec-6,
-.rec-7 {
+#dots {
+    position: relative;
+    width: 100px;
+    margin: 0 270px;
+    z-index: 440;
+
+}
+
+.rec {
     width: 100%;
     height: 70px;
     display: flex;

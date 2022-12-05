@@ -45,23 +45,23 @@ const options = {
     }
 };
 
-fetch('https://manga-scrapper.p.rapidapi.com/series/return-of-the-disaster-class-hero/?provider=asura', options)
-    .then(response => response.json())
-    .then(result => {
-        // console.log(result.data)
+// fetch('https://manga-scrapper.p.rapidapi.com/series/return-of-the-disaster-class-hero/?provider=asura', options)
+    // .then(response => response.json())
+    // .then(result => {
+    //     // console.log(result.data)
 
-        //Set the source attribute of MangaCover
-        trendImg.setAttribute('src', result.data['MangaCover']);
+    //     //Set the source attribute of MangaCover
+    //     trendImg.setAttribute('src', result.data['MangaCover']);
 
-        //Set the text to the title of the Manga
+    //     //Set the text to the title of the Manga
 
-        trendTitle.textContent = result.data['MangaTitle'];
+    //     trendTitle.textContent = result.data['MangaTitle'];
 
-        //Set the href of anchor tag so clicking the image goes to the correct place
-        trendingA.setAttribute('href', result.data['MangaShortUrl'])
-    }
-    )
-    .catch(error => console.error(error));
+    //     //Set the href of anchor tag so clicking the image goes to the correct place
+    //     trendingA.setAttribute('href', result.data['MangaShortUrl'])
+    // }
+    // )
+    // .catch(error => console.error(error));
 
 
 const config = {
@@ -70,23 +70,20 @@ const config = {
         'X-RapidAPI-Key': '93ed9305c7msh8bee1838f559b6bp1e62efjsnaa270facb818',
         'X-RapidAPI-Host': 'manga-scrapper.p.rapidapi.com'
     }
-}; fetch('https://manga-scrapper.p.rapidapi.com/series/?provider=asura&limit=4', config)
-    .then(response => response.json())
-    .then(result => {
-        const { series: data } = result.data;
-        console.log(result.data.series[2].MangaCover)
-        for (element of data) {
-            if (element['MangaTitle'] === 'Join Our Discord') continue;
+ }//; fetch('https://manga-scrapper.p.rapidapi.com/series/?provider=asura&limit=4', config)
+    // .then(response => response.json())
+    // .then(result => {
+    //     const { series: data } = result.data;
+    //     console.log(result.data.series[2].MangaCover)
+    //     for (element of data) {
+    //         if (element['MangaTitle'] === 'Join Our Discord') continue;
 
 
-            imgRandom.forEach(img => {
-                img.setAttribute('src', result.data.series[2].MangaCover)
+    //         imgRandom.forEach(img => {
+    //             img.setAttribute('src', result.data.series[2].MangaCover)
 
 
-            });
-
-
-
+    //         });
 
 
 
@@ -94,13 +91,16 @@ const config = {
 
 
 
-        }
+
+
+
+    //     }
 
 
 
 
-    })
-    .catch(error => console.error(error))
+    // })
+    // .catch(error => console.error(error))
 
 
 const recommendations = document.querySelector('.rec');

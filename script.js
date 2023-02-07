@@ -59,6 +59,9 @@ function showClickedManga(){
 
 let slideIndex = 1;
 showSlides(slideIndex);
+setInterval(function() {
+showSlides(slideIndex += 1);
+}, 5000);
 
 // Next/previous controls
 function plusSlides(n) {

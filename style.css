@@ -330,7 +330,6 @@ img:hover{
         z-index: -5;
         border: 2px solid rgba(0,0,0,0.2);
         border-radius: 3px;
-        background-color: #000;
     }
 
     .slideImg{
@@ -414,9 +413,6 @@ img:hover{
     ;
 }
 
-@media screen and (max-width: 768px) {
-    
-}
 /* ////////////////////SLIDER END //////////////////////////////// */
 
 
@@ -733,7 +729,7 @@ a {
 
 .manga-data__container{
     width: 100%;
-    height: 80vh;
+    height: fit-content;
     display: flex;
     background-color: var(--background-color);
     border-radius: 10px;
@@ -982,23 +978,27 @@ select{
 }
 
 
-@media screen and (max-width: 768px) {
-
+/* //////////////////////// Media Queries ///////////////////////////// */
+@media screen and (max-width: 1024px) {
     body{
-        display: block;
-        overflow-x: hidden !important;
+        overflow-x: hidden;
     }
 
     .container {
-        width: 768px;
+        width: 1024px;
         margin-left: 0;
         overflow-y: hidden;
+        overflow-x: hidden;
         }
         
 
     #search-bar{
         position: absolute;
-        margin-left: 40%
+        margin-left: 60%
+    }
+
+    .results{
+        margin-left: 40% !important;
     }
 
     
@@ -1013,7 +1013,156 @@ select{
     }
 
     .top-container{
-        width: 1000px;
+        width: 1024px;
+        margin: 0 20%;
+        overflow-y: hidden;
+    }
+
+    .top-nav{
+        width: 1024px !important;
+    }
+    
+    .container-slide{
+        position:relative; 
+        width: 1024px !important;
+    }
+    .slides{
+        width: 1024px !important;
+        overflow-y: hidden;
+    }
+
+    .slideImg{
+        width: 1024px;
+    }
+
+    .container-popular{
+        width: 1024px;
+        /* overflow-y: hidden; */
+    }
+
+    .popGrid{
+        grid-template-rows:repeat (5, auto);
+        width: 1024px;
+        gap: 3.7rem;
+        height: 350px;
+        left: 0;       
+        justify-content: space-between;
+    }
+
+    .popular img{
+        width: fit-content;
+    }
+
+    .latest-update-container{
+        width: 1024px !important;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .cell-container{
+        width: 1024px;
+        overflow-y: hidden;
+    }
+
+    .cell{
+        width: 512px;
+    }
+
+    .manga-info{
+        width: 100%;
+    }
+
+    .manga-container{
+        width: 100% !important;
+    }
+    
+  
+    #latest-title{
+        font-size: 1.2rem !important;
+    }
+
+    .chapter-list{
+        height: 300px !important;
+        overflow: hidden;
+    }
+
+    .chapter-title{
+        width: 100%;
+        font-weight: 500;
+        font-size: 1rem;
+        position: absolute;   
+    }
+
+    .manga-data__image{
+        width: 150px !important;
+    }
+
+    .chapter__container{
+        margin: 0 auto !important;
+    }
+
+    .chapter-buttons__container{
+        margin: 0 auto !important;
+    }
+
+    footer{
+        width: 1024px !important;
+    }
+
+    .next-btn {
+        transform: translateX(-50%);
+        
+      }
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        display: block;
+        overflow-x: hidden !important;
+    }
+
+    .container {
+        width: 768px;
+        margin-left: 0;
+        overflow-y: hidden;
+        overflow-x: hidden !important;
+        }
+        
+
+    #search-bar{
+        position: absolute;
+        margin-left: 40%
+    }
+
+    .results{
+        position: relative;
+        margin-top: -100px;
+        margin-left: 50% !important;
+    }
+
+    
+
+    .rec-container{
+        display: none;
+        overflow-y: hidden;
+    }
+    
+    .trending{
+        display: none;
+    }
+
+    .top-nav{
+        width: 768px !important;
+    }
+
+    .bottom-nav{
+        width: 768px !important;
+    }
+    
+
+    .top-container{
+        width: 768px;
         margin: 0 10%;
         overflow-y: hidden;
 
@@ -1027,38 +1176,31 @@ select{
     }
     .slides{
         width: 768px;
-        overflow-y: hidden;
+        overflow-y: hidden !important;
     }
 
     .slideImg{
-        width: 768px;
+        width: 768px !important;
     }
 
     .container-popular{
         width: 768px;
-        overflow-y: hidden;
+        overflow-x: hidden !important;
     }
 
     .popGrid{
-        grid-template-rows:repeat (5, auto);
-        width: 768px;
+        grid-template-rows:repeat (1, auto);
+        width: 1024px;
+        gap: 3rem;
         height: 350px;
-        left: 0;
-        background-color: #312f40;
-        display: flex;
-        padding-right: 0;
-        border-radius: 5px;
-        overflow-y: hidden;
-        overflow: hidden;
-        justify-content: space-around;
+        overflow-y: hidden !important;
+        left: 0;       
+        justify-content: space-between;
     }
-
-    .popular img{
-        width: fit-content;
-    }
+    
 
     .latest-update-container{
-        display: block;
+
         width: 768px !important;
         overflow-y: hidden;
     }
@@ -1073,7 +1215,7 @@ select{
     }
 
     .manga-info{
-        width: 30%;
+        width: 384px;
     }
 
     .manga-container{
@@ -1082,7 +1224,7 @@ select{
     
   
     #latest-title{
-        font-size: .9rem !important;
+        font-size: 1rem !important;
     }
 
     .chapter-list{
@@ -1101,29 +1243,41 @@ select{
     .chapter-buttons__container{
         margin: 0 auto !important;
     }
+
+
+    footer{
+        width: 768px !important;
+        overflow-y: hidden !important;
+    }
 }
 
-/* /////////////////////// */
+
+
+
 @media screen and (max-width: 320px) {
 
     .container {
         width: 320px;
-        margin-left: 0;
-        overflow-y: hidden;
+
         }
         
 
     #search-bar{
-        position: absolute;
         width: 40%;
         margin-left: 5%
     }
+
+
 
     .top-container{
         width: 320px;
         margin: 0 10%;
         overflow-y: hidden;
 
+    }
+
+    .top-nav{
+        width: 320px !important;
     }
 
     .top-nav h1{
@@ -1160,6 +1314,7 @@ select{
     }
     .slides{
         width: 320px !important;
+        border-radius: 20px;
         overflow-y: hidden;
     }
 
@@ -1173,16 +1328,18 @@ select{
     }
 
     .container-popular{
-        width: 325px !important;
+        width: 320px !important;
         margin: 0 auto !important ;
         overflow-y: hidden !important;
     }
 
     .popGrid{
-        grid-template-rows:repeat (2, 1fr) !important;
-        width: 320px;
-        left: -10px;
-
+        width: 320px !important;
+        gap: 0;
+        margin-left: -8px;
+        height: 350px;
+        left: 0;       
+        justify-content: space-between;
     }
 
     .popular img{
@@ -1191,34 +1348,20 @@ select{
 
     .latest-update-container{
         width: 320px !important;
-        height: fit-content;
-        overflow-y: hidden !important;
+        overflow-x: hidden;
     }
 
-    .cell-container {
-        display: flex;
-        grid-template-columns: repeat(1, 1fr);
+    .cell-container{
         width: 320px;
-        height: fit-content;
-        overflow-x: hidden;
-      }
+        overflow-y: hidden;
+    }
 
     .cell{
         width: 320px;
     }
 
     .manga-info{
-        width: 50% !important;
-        line-height: .4rem !important;
-        font-size: .1rem !important;
-    }
-
-    .manga-info ul li{
-        font-size: .6rem !important;
-    }
-
-    .dAgo{
-        font-size: .3rem;
+        width: 320px !important;
     }
 
     .manga-container{
@@ -1227,7 +1370,11 @@ select{
     
   
     #latest-title{
-        font-size: .7rem !important;
+        font-size: .8rem !important;
+    }
+
+    .firstCh, .newCh{
+        font-size: .7rem;
     }
 
     .chapter-list{
@@ -1236,59 +1383,27 @@ select{
     }
 
     .manga-data__image{
-        display: block;
-    }
-
-    .manga-data__image{
         width: 75px !important;
     }
 
-.manga-data__image-container span{
-    font-size: .6rem;
-    padding: 0 8px;
-}
     .manga-data__synopsis{
         font-size: .6rem;
     }
-     .firstCh{
-        font-size: .7rem ;
-    }
-
-    .newCh{
-        font-size: .7rem ;
-    }
-
-    .chapter-title{
-        font-size: .8rem !important;
-    }
-
-    .chapter-buttons__list{
-        font-size: .8rem  !important ;
-    }
 
     .chapter__container{
-        width: 100% !important;
-    }
-    .nextCh,.prevCh{
-        
-        padding: 2px 7px !important;
-        border-radius: 20px;
-        color: #fff;
-        font-weight: 600;
-        font-size: .5rem !important;
-        
+        width: 100%;
     }
 
-    .fa-greater-than{
-        font-size: .5rem !important;
+    .chapter-buttons__container{
+        margin: 0 auto !important;
     }
 
-    .fa-less-than{
-        font-size: .5rem !important;
+    ul li{
+        font-size: .5rem;
+        margin-left: -20px;
     }
 
     footer{
-        font-size: .6rem;
+        width: 320px !important;
     }
-    
 }
